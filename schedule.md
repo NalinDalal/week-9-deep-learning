@@ -5,8 +5,6 @@
 
 | DLS C2 Week | Assignment | What You Learn |
 |-------------|-----------|----------------|
-| W1(15.03) | [Initialization](https://nbviewer.jupyter.org/github/amanchadha/coursera-deep-learning-specialization/blob/master/C2%20-%20Improving%20Deep%20Neural%20Networks%20Hyperparameter%20tuning%2C%20Regularization%20and%20Optimization/Week%201/Initialization/Initialization.ipynb) | Zero vs random vs He init |
-| W1(16.03) | [Regularization](https://nbviewer.jupyter.org/github/amanchadha/coursera-deep-learning-specialization/blob/master/C2%20-%20Improving%20Deep%20Neural%20Networks%20Hyperparameter%20tuning%2C%20Regularization%20and%20Optimization/Week%201/Regularization/Regularization_v2a.ipynb) | L2, dropout |
 | W1(17.03) | [Gradient Checking](https://nbviewer.jupyter.org/github/amanchadha/coursera-deep-learning-specialization/blob/master/C2%20-%20Improving%20Deep%20Neural%20Networks%20Hyperparameter%20tuning%2C%20Regularization%20and%20Optimization/Week%201/Gradient%20Checking/Gradient%20Checking%20v1.ipynb) | Verify backprop implementation |
 | W2(18.03) | [Optimization Methods](https://nbviewer.jupyter.org/github/amanchadha/coursera-deep-learning-specialization/blob/master/C2%20-%20Improving%20Deep%20Neural%20Networks%20Hyperparameter%20tuning%2C%20Regularization%20and%20Optimization/Week%202/Optimization_methods_v1b.ipynb) | SGD, momentum, Adam |
 | W3(19.03) | [TensorFlow Tutorial](https://nbviewer.jupyter.org/github/amanchadha/coursera-deep-learning-specialization/blob/master/C2%20-%20Improving%20Deep%20Neural%20Networks%20Hyperparameter%20tuning%2C%20Regularization%20and%20Optimization/Week%203/Tensorflow_introduction.ipynb) | Framework transition |

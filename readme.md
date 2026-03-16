@@ -1,4 +1,3 @@
-
 ## Neural Network Initialization: Why and How
 
 - **Initialization** is critical for training deep neural networks efficiently.
@@ -24,35 +23,6 @@
 - **utils.py**: Helper functions (activation, loss, plotting, etc.).
 - **datasets.py**: Data loading and preprocessing.
 
-#### Example init.py Structure
-
-```python
-# init.py
-from initializations import initialize_parameters
-from model import NeuralNetwork
-from datasets import load_dataset
-
-def main():
-    # Load data
-    train_X, train_Y, test_X, test_Y = load_dataset()
-    
-    # Choose initialization
-    init_method = "he"  # or "zeros", "random", etc.
-    layers_dims = [train_X.shape[0], 10, 5, 1]
-    parameters = initialize_parameters(layers_dims, method=init_method)
-    
-    # Build and train model
-    nn = NeuralNetwork(layers_dims, parameters)
-    nn.train(train_X, train_Y, num_iterations=15000, learning_rate=0.01)
-    
-    # Evaluate
-    print("Train accuracy:", nn.evaluate(train_X, train_Y))
-    print("Test accuracy:", nn.evaluate(test_X, test_Y))
-
-if __name__ == "__main__":
-    main()
-```
-
 ---
 
 **What you should remember:**
@@ -60,3 +30,30 @@ if __name__ == "__main__":
 - Random initialization is used to break symmetry and make sure different hidden units can learn different things
 - Don't intialize to values that are too large
 - He initialization works well for networks with ReLU activations.
+
+## Regularization: Theory & Implementation
+
+### Theory
+Regularization helps prevent overfitting in neural networks by adding a penalty to the loss function, discouraging overly complex models.
+
+**Common Types:**
+- **L2 Regularization (Ridge):** Adds $\lambda \sum W^2$ to the loss, penalizing large weights. Makes the model simpler and more generalizable.
+- **L1 Regularization (Lasso):** Adds $\lambda \sum |W|$ to the loss, encouraging sparsity (some weights become zero).
+- **Dropout:** Randomly sets a fraction of activations to zero during training, forcing the network to not rely on any single neuron.
+
+**Effect:**
+Regularization reduces variance (overfitting) at the cost of a slight increase in bias, leading to better generalization on unseen data.
+
+---
+
+### Implementation Plan
+1. **L2 Regularization:**  
+  - Add an L2 penalty term to your loss function:  
+    $J = \text{original loss} + \frac{\lambda}{2m} \sum_l \|W^{[l]}\|^2$
+  - Update gradients to include the L2 term.
+
+2. **Dropout:**  
+  - During forward propagation, randomly set some activations to zero with probability $p$.
+  - Scale activations during training to keep expected values consistent.
+
+Regularization reduces overfitting and improves model generalization.
